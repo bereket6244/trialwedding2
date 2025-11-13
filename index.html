@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridal Shower Reveal</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 450px; /* controls max size on larger screens */
+        position: relative;
+        margin: 20px;
+    }
+
+    .invite-image {
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+
+    /* Wax seal perfectly centered and responsive */
+    .wax {
+        position: absolute;
+        width: 25%;              /* scales with screen size */
+        max-width: 110px;        /* limits so it doesn’t get too big */
+        left: 50%;
+        bottom: 5%;              /* adjusts position under envelope */
+        transform: translateX(-50%);
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .wax:hover {
+        transform: translateX(-50%) scale(1.08);
+    }
+
+    /* Small screens fix */
+    @media (max-width: 420px) {
+        .wax {
+            bottom: 35%;       /* moves wax slightly for smaller screens */
+            width: 30%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Your full image with envelope -->
+    <img src="bridal_front.png" class="invite-image" alt="Bridal Shower">
+
+    <!-- Wax seal clickable -->
+    <a href="invitation.png">
+        <img src="wax.png" class="wax" alt="Wax Seal">
+    </a>
+</div>
+
+</body>
+</html>
